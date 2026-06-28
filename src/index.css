@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-secondary: #1e40af;
+  --color-accent: #f59e0b;
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+  --color-light-gray: #f3f4f6;
+  --color-border: #e5e7eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
