@@ -38,14 +38,13 @@ export default function Services() {
           نقدم حلول متكاملة لجميع احتياجاتك التقنية
         </p>
 
-        {/* BUG 3: Fixed width cards with grid-cols-3 causes horizontal overflow on mobile */}
-        <div className="grid grid-cols-3 gap-6 overflow-x-auto pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.id}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 min-w-100 hover:-translate-y-1 border border-gray-100"
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
               >
                 <div className="mb-4 p-4 bg-linear-to-br from-blue-100 to-blue-50 rounded-xl w-fit group-hover:from-blue-200 group-hover:to-blue-100 transition-colors duration-300">
                   <Icon size={32} className="text-blue-600" />

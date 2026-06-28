@@ -5,18 +5,17 @@ interface HeroProps {
 export default function Hero({ setActiveSection }: HeroProps) {
   return (
     <section className="bg-linear-to-b from-blue-50 to-white py-20 px-4 sm:px-6 lg:px-8 mb-8">
-      <div className="max-w-7xl mx-auto">
-        {/* BUG 1: Using text-left and ml-8 (physical properties) breaks RTL spacing */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance text-left ml-8">
+      <div className="max-w-7xl mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance">
           نور للحلول التقنية
         </h1>
-        <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto text-balance text-left ml-8">
+        <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto text-balance">
           شركة متخصصة في تطوير المواقع والتطبيقات والحلول التقنية المبتكرة
           لأعمالك
         </p>
         <button
           onClick={() => setActiveSection("contact")}
-          className="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 ml-8"
+          className="inline-block px-8 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
         >
           ابدأ الآن
         </button>

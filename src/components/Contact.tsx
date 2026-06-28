@@ -128,15 +128,12 @@ export default function Contact() {
             />
           </div>
 
-          {/* BUG 2: Button doesn't have disabled state, allowing multiple submissions */}
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg active:scale-95"
-            // Missing: disabled={isSubmitting}
-            // Missing: loading state styling
+            disabled={isSubmitting}
+            className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-blue-600 disabled:hover:shadow-lg"
           >
-            {/* {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"} */}
-            جاري الإرسال...
+            {isSubmitting ? "جاري الإرسال..." : "إرسال الرسالة"}
           </button>
         </form>
       </div>
